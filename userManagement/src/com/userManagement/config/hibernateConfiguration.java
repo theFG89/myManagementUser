@@ -19,19 +19,21 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  
 @Configuration
 @EnableTransactionManagement
-@ComponentScan({"com.userManagement.configuration"})
-@PropertySource(value = { "classpath:application.properties" })
+@ComponentScan({"com.userManagement.config"})
+@PropertySource(value = { "WEB-INF/application.properties" })
 public class hibernateConfiguration {
  
     @Autowired
     private Environment environment;
  
+
     @Bean
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
         sessionFactory.setPackagesToScan(new String[] { "com.userManagement.model" });
         sessionFactory.setHibernateProperties(hibernateProperties());
+     //   System.out.println(System.getProperty("java.class.path"));
         return sessionFactory;
      }
      

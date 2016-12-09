@@ -16,7 +16,7 @@ import com.userManagement.model.user;
 public class userDaoImpl implements userDao{
 
 	@PersistenceContext
-	private EntityManager em;
+	private static EntityManager em;
 
 
 	@Override
@@ -37,8 +37,8 @@ public class userDaoImpl implements userDao{
 		
 	}
 	
-	@Override
-	public List<user> getAllUser() {
+	//@Override
+	public  List<user> getAllUser() {
 		 List<user> u = em.createQuery("from user",user.class).getResultList();
 		return u;
 	}

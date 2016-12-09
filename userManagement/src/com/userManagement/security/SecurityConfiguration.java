@@ -53,10 +53,10 @@ The configuration ensures that:
 	*/
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests().antMatchers("/", "/list")
-                .access("hasRole('USER') or hasRole('ADMIN')")
-                .antMatchers("/newuser/**", "/delete-user-*").access("hasRole('ADMIN')").antMatchers("/edit-user-*")
-                .access("hasRole('ADMIN')").and().formLogin().loginPage("/login")
+        http.authorizeRequests()
+        		.antMatchers("/", "/list").access("hasRole('USER') or hasRole('ADMIN')")
+                .antMatchers("/newuser/**", "/delete-user-*").access("hasRole('ADMIN')")
+                .antMatchers("/edit-user-*").access("hasRole('ADMIN')").and().formLogin().loginPage("/login")
                 .loginProcessingUrl("/login").usernameParameter(/*"ssoId"*/"username").passwordParameter("password").and()
                 .rememberMe().rememberMeParameter("remember-me").tokenRepository(tokenRepository)
                 .tokenValiditySeconds(86400).and().csrf().and().exceptionHandling().accessDeniedPage("/Access_Denied");
