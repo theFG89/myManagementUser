@@ -8,6 +8,7 @@
 </head>
 <body>
 	<h1>messaggio from model: </h1><br>
-	 <h2>${message}</h2>
+	 <h2>${username}</h2>
+	 <h2>${password}</h2>
 </body>
 </html>

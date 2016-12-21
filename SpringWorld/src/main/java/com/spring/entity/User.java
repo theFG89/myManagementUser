@@ -1,4 +1,4 @@
-package entity;
+package com.spring.entity;
 
 public class User {
 
