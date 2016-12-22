@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>CIAO Fabio22/12 12.18</h1>
+	<h1>CIAO Fabio21/12 15.18</h1>
 	<br><br><br>
 	<j:form action="welcome" method="post" commandName="sendData">
 	 Nome utente:<input type="text" name ="username"/><br><br>

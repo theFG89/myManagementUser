@@ -16,15 +16,29 @@ public class HomeController {
 	
 	@RequestMapping(value="/welcome", method=RequestMethod.POST)
 	public String  passValue(/*("SpringWeb")Employee emp,BindingResult result,*/@RequestParam("username") String username, 
-
-			  @RequestParam("password")String password, ModelMap model){
+								@RequestParam("password")String password, ModelMap model){
+	
 		model.addAttribute("username", username);		
 		model.addAttribute("password", password);
 		
 		return "welcome";
 			
 						}
+	@RequestMapping(value="/newuser" /*,method=RequestMethod.GET*/)
+	public String saveUser(){
+		return "newuser";
 		
+	}
+	
+	@Controller
+	public class RootController {
+	    @RequestMapping(value = "/", method = RequestMethod.GET)
+	    public String root() {
+	        return "index";
+	    }
+	}
+	
+			
 	}
 
 	/*public ModelAndView GetWelcome(Model model){

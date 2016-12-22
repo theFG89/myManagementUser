@@ -24,7 +24,7 @@
 		<property name="suffix" value=".jsp" />
 	</bean>
 	
-	<bean id="user"  class="com.spring.entity.User"/>
+	<!-- <bean id="user"  class="com.spring.entity.User"/> -->
 	  
  
 </beans>

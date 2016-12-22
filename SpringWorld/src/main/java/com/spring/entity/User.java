@@ -8,7 +8,7 @@ public class User {
 	
 	
 	public User(String idU, String username, String password) {
-		super();
+		
 		this.idU = idU;
 		this.username = username;
 		this.password = password;

@@ -5,16 +5,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
+<title>Creazione nuova utenza</title>
 </head>
 <body>
-	<h1>CIAO Fabio22/12 12.18</h1>
-	<br><br><br>
-	<j:form action="welcome" method="post" commandName="sendData">
-	 Nome utente:<input type="text" name ="username"/><br><br>
-	 Password: <input type="password" name="password"/><br><br>
-	 <input type="submit" value ="Enter"/>
-	</j:form>
-	<a href="newuser">Clicca qui per creare nuova utenza</a>
+<h1>Nuova Utenza</h1><br><br>
+
+ <j:form action="/SpringWorld/" method="post" commandName="save">
+	New Username: <input type="text" name="username"/><br><br>
+	New Password: <input type="password" name="password"/><br><br>
+	<input type="submit" value="SALVA"/><br><br>
+</j:form>
+<a href="/SpringWorld/">Torna indietro</a>
+
+	
 </body>
 </html>
