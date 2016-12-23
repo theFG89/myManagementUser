@@ -10,7 +10,7 @@
 <body>
 	<h1>CIAO Fabio22/12 12.18</h1>
 	<br><br><br>
-	<j:form action="welcome" method="post" commandName="sendData">
+	<j:form action="welcome" method="POST" commandName="sendData">
 	 Nome utente:<input type="text" name ="username"/><br><br>
 	 Password: <input type="password" name="password"/><br><br>
 	 <input type="submit" value ="Enter"/>

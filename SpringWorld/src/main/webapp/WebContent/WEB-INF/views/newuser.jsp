@@ -9,7 +9,7 @@
 </head>
 <body>
 <h1>Nuova Utenza</h1><br><br>
-
+	<h3>${newnew}</h3>
  <j:form action="/SpringWorld/" method="post" commandName="save">
 	New Username: <input type="text" name="username"/><br><br>
 	New Password: <input type="password" name="password"/><br><br>
